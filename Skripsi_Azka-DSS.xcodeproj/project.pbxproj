@@ -14,6 +14,10 @@
 		BBDEB5442967D1BF00B018C8 /* Skripsi_Azka_DSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5422967D1BF00B018C8 /* Skripsi_Azka_DSS.xcdatamodeld */; };
 		BBDEB5462967D1C000B018C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDEB5452967D1C000B018C8 /* Assets.xcassets */; };
 		BBDEB5492967D1C000B018C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDEB5472967D1C000B018C8 /* LaunchScreen.storyboard */; };
+		BBDEB5542967D25700B018C8 /* TypeOfDesease.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5532967D25700B018C8 /* TypeOfDesease.swift */; };
+		BBDEB5572967D64000B018C8 /* DeseaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5552967D64000B018C8 /* DeseaseType.swift */; };
+		BBDEB5582967D64000B018C8 /* DeseaseType.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDEB5562967D64000B018C8 /* DeseaseType.xib */; };
+		BBDEB55C29683BBE00B018C8 /* QnAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB55B29683BBE00B018C8 /* QnAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		BBDEB5452967D1C000B018C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDEB5482967D1C000B018C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDEB54A2967D1C000B018C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBDEB5532967D25700B018C8 /* TypeOfDesease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfDesease.swift; sourceTree = "<group>"; };
+		BBDEB5552967D64000B018C8 /* DeseaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeseaseType.swift; sourceTree = "<group>"; };
+		BBDEB5562967D64000B018C8 /* DeseaseType.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeseaseType.xib; sourceTree = "<group>"; };
+		BBDEB55B29683BBE00B018C8 /* QnAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +68,42 @@
 			children = (
 				BBDEB5392967D1BF00B018C8 /* AppDelegate.swift */,
 				BBDEB53B2967D1BF00B018C8 /* SceneDelegate.swift */,
-				BBDEB53D2967D1BF00B018C8 /* ViewController.swift */,
-				BBDEB53F2967D1BF00B018C8 /* Main.storyboard */,
+				BBDEB5522967D1EC00B018C8 /* Model */,
+				BBDEB5512967D1E600B018C8 /* Controller */,
+				BBDEB5502967D1E100B018C8 /* View */,
 				BBDEB5452967D1C000B018C8 /* Assets.xcassets */,
 				BBDEB5472967D1C000B018C8 /* LaunchScreen.storyboard */,
 				BBDEB54A2967D1C000B018C8 /* Info.plist */,
 				BBDEB5422967D1BF00B018C8 /* Skripsi_Azka_DSS.xcdatamodeld */,
 			);
 			path = "Skripsi_Azka-DSS";
+			sourceTree = "<group>";
+		};
+		BBDEB5502967D1E100B018C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEB53F2967D1BF00B018C8 /* Main.storyboard */,
+				BBDEB5552967D64000B018C8 /* DeseaseType.swift */,
+				BBDEB5562967D64000B018C8 /* DeseaseType.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BBDEB5512967D1E600B018C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEB53D2967D1BF00B018C8 /* ViewController.swift */,
+				BBDEB55B29683BBE00B018C8 /* QnAViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BBDEB5522967D1EC00B018C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEB5532967D25700B018C8 /* TypeOfDesease.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDEB5582967D64000B018C8 /* DeseaseType.xib in Resources */,
 				BBDEB5492967D1C000B018C8 /* LaunchScreen.storyboard in Resources */,
 				BBDEB5462967D1C000B018C8 /* Assets.xcassets in Resources */,
 				BBDEB5412967D1BF00B018C8 /* Main.storyboard in Resources */,
@@ -142,9 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDEB53E2967D1BF00B018C8 /* ViewController.swift in Sources */,
+				BBDEB55C29683BBE00B018C8 /* QnAViewController.swift in Sources */,
 				BBDEB5442967D1BF00B018C8 /* Skripsi_Azka_DSS.xcdatamodeld in Sources */,
 				BBDEB53A2967D1BF00B018C8 /* AppDelegate.swift in Sources */,
 				BBDEB53C2967D1BF00B018C8 /* SceneDelegate.swift in Sources */,
+				BBDEB5572967D64000B018C8 /* DeseaseType.swift in Sources */,
+				BBDEB5542967D25700B018C8 /* TypeOfDesease.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
