@@ -18,6 +18,8 @@ class QnAViewController: UIViewController {
     var selectedValue: String?
     var rightBarButtonItem : UIBarButtonItem!
     
+    var questionModel = QuestionBrain()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,6 +83,7 @@ class QnAViewController: UIViewController {
         titlefield?.resignFirstResponder()
         selectedValue = picker?.selectedValue
         titlefield.text = selectedValue
+        questionModel.userAnswerFeases(selectedValue ?? "")
 
         self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
         

@@ -18,6 +18,7 @@ class PilihanGandaQnAViewController: UIViewController {
     var typeOfDesease = ""
     var questionModel = QuestionBrain()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,15 +32,31 @@ class PilihanGandaQnAViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        print(sender.currentTitle)
+        questionModel.userAnswerDrinking(sender.currentTitle ?? "")
+        topButton.isHidden = false
+        
+        questionModel.nextQuestion()
+        fetchQuestion()
+        
+        if questionModel.checkTopButton() < 2 {
+            topButton.isHidden = true
+        }
+        
         
     }
+    
     
     func fetchQuestion(){
         
         questionText.text = questionModel.fetchQuestion()
         midButton.setTitle(questionModel.fetchAnswerMidButton(), for: .normal)
         lowerButton.setTitle(questionModel.fetchAnswerlowerButton(), for: .normal)
+        
+        if topButton.isHidden == false && questionModel.checkTopButton() > 1{
+            topButton.setTitle(questionModel.fetchAnswerTopButton(), for: .normal)
+        }
+        
+        
     }
     
     func navBarUI() {
