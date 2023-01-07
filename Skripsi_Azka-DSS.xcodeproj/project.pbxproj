@@ -22,6 +22,7 @@
 		BBDEB560296924E800B018C8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB55F296924E800B018C8 /* Question.swift */; };
 		BBDEB5622969258700B018C8 /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5612969258700B018C8 /* QuestionBrain.swift */; };
 		BBDEB56429692E8F00B018C8 /* UserAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB56329692E8F00B018C8 /* UserAnswer.swift */; };
+		BBDEB5662969ADE900B018C8 /* DiareDeases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5652969ADE900B018C8 /* DiareDeases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BBDEB55F296924E800B018C8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BBDEB5612969258700B018C8 /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
 		BBDEB56329692E8F00B018C8 /* UserAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswer.swift; sourceTree = "<group>"; };
+		BBDEB5652969ADE900B018C8 /* DiareDeases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiareDeases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				BBDEB55F296924E800B018C8 /* Question.swift */,
 				BBDEB5612969258700B018C8 /* QuestionBrain.swift */,
 				BBDEB56329692E8F00B018C8 /* UserAnswer.swift */,
+				BBDEB5652969ADE900B018C8 /* DiareDeases.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				BBDEB53E2967D1BF00B018C8 /* ViewController.swift in Sources */,
 				BBDEB55C29683BBE00B018C8 /* QnAViewController.swift in Sources */,
+				BBDEB5662969ADE900B018C8 /* DiareDeases.swift in Sources */,
 				BBDEB5442967D1BF00B018C8 /* Skripsi_Azka_DSS.xcdatamodeld in Sources */,
 				BBDEB560296924E800B018C8 /* Question.swift in Sources */,
 				BBDEB53A2967D1BF00B018C8 /* AppDelegate.swift in Sources */,

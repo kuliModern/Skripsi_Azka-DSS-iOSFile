@@ -5,18 +5,16 @@
 //  Created by Azka Kusuma Edy on 07/01/23.
 //
 
-import Foundation
+
 import UIKit
 
 struct QuestionBrain {
     
     var question = [
         Question(question: "Does your pet change food recently?", answer: ["Yes", "No"]),
-        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water", "Lainnya"]),
+        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water", "Other"]),
         Question(question: "Does your pet already given Vaccine?", answer: ["Yes", "No"])
     ]
-    
-    
     
     var userAnswer: [String] = []
     
@@ -30,7 +28,6 @@ struct QuestionBrain {
     func fetchAnswerTopButton() -> String {
         return question[questionNumber].answer[2]
     }
-
     
     func fetchAnswerMidButton() -> String {
         return question[questionNumber].answer[0]
@@ -39,22 +36,14 @@ struct QuestionBrain {
         return question[questionNumber].answer[1]
     }
     
-    mutating func userAnswerPilGan(_ answer: String){
-        // Pake Core Data disini
-        userAnswer.append(answer)
-        print(userAnswer)
-    }
-    
-    mutating func userAnswerFeases(_ answer: String){
-        // Pake Core Data disini
-        userAnswer.append(answer)
-        print(userAnswer)
-        
-    }
-    
     func checkTopButton() -> Int{
         
         return question[questionNumber].answer.count - 1
+    }
+    
+    func questionNumbers() -> Int{
+        
+        return questionNumber
     }
     
    mutating func nextQuestion(){

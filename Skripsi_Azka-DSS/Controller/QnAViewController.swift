@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class QnAViewController: UIViewController {
     
@@ -15,14 +16,14 @@ class QnAViewController: UIViewController {
     var typeOfDesease = ""
     var pickerAccessory: UIToolbar?
     var picker: MyPickerView?
-    var selectedValue: String?
+    var selectedValue: Int?
     var rightBarButtonItem : UIBarButtonItem!
+
     
     var questionModel = QuestionBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(confirmMainMenu))
@@ -30,9 +31,7 @@ class QnAViewController: UIViewController {
         self.rightBarButtonItem = UIBarButtonItem(title: "Done", style:         UIBarButtonItem.Style.done, target: self, action: #selector(doneButtonPressed))
         
         self.navigationItem.rightBarButtonItem = nil
-        
-        
-        
+
         // Picker
         picker = MyPickerView()
         picker?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -40,7 +39,6 @@ class QnAViewController: UIViewController {
         
         picker?.data = [1,2,3,4,5,6,7]
         pickerUI()
-        
         
         titlefield.inputAccessoryView = pickerAccessory
         titlefield.inputView = picker
@@ -78,27 +76,25 @@ class QnAViewController: UIViewController {
         titlefield?.resignFirstResponder()
     }
     
-    
     @objc func doneBtnClicked(_ button: UIBarButtonItem?) {
         titlefield?.resignFirstResponder()
         selectedValue = picker?.selectedValue
-        titlefield.text = selectedValue
-        questionModel.userAnswerFeases(selectedValue ?? "")
-
+        titlefield.text = String(selectedValue!) ?? ""
+        
         self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
         
     }
     
     @objc func doneButtonPressed(){
-        
+      
         if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
             vc.typeOfDesease = typeOfDesease
+            vc.feasesScore = selectedValue!
             
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }
-    
 }
 
 class MyPickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -111,12 +107,12 @@ class MyPickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
         }
     }
     
-    public var selectedValue: String {
+    public var selectedValue: Int {
         get {
             if data != nil {
-                return String(data![selectedRow(inComponent: 0)])
+                return data![selectedRow(inComponent: 0)]
             } else {
-                return ""
+                return 0
             }
         }
     }

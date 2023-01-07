@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PilihanGandaQnAViewController: UIViewController {
 
@@ -17,7 +18,18 @@ class PilihanGandaQnAViewController: UIViewController {
     
     var typeOfDesease = ""
     var questionModel = QuestionBrain()
-//    
+    var feasesScore = 0
+    var arrayUserAnswer = Desease()
+    var question = ""
+    var userAnswers = ""
+    
+    var userAnswer = [
+        ["Question1","UserAnswer"],
+        ["Question2","UserAnswer2"],
+        ["Question3","UserAnswer"],
+        ["Question4","UserAnswer2"]
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +38,17 @@ class PilihanGandaQnAViewController: UIViewController {
         topButton.isHidden = true
         navBarUI()
         fetchQuestion()
-        
-        // Do any additional setup after loading the view.
+        print(feasesScore)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        questionModel.userAnswerPilGan(sender.currentTitle ?? "")
         topButton.isHidden = false
+        userAnswers = String(sender.currentTitle!)
+        
+        
+         userAnswer[questionModel.questionNumbers()][1] = userAnswers
+         print(userAnswer)
         
         questionModel.nextQuestion()
         fetchQuestion()
@@ -42,13 +57,13 @@ class PilihanGandaQnAViewController: UIViewController {
             topButton.isHidden = true
         }
         
-        
+       
     }
-    
     
     func fetchQuestion(){
         
-        questionText.text = questionModel.fetchQuestion()
+        question = questionModel.fetchQuestion()
+        questionText.text = question
         midButton.setTitle(questionModel.fetchAnswerMidButton(), for: .normal)
         lowerButton.setTitle(questionModel.fetchAnswerlowerButton(), for: .normal)
         
@@ -56,6 +71,8 @@ class PilihanGandaQnAViewController: UIViewController {
             topButton.setTitle(questionModel.fetchAnswerTopButton(), for: .normal)
         }
         
+        userAnswer[questionModel.questionNumbers()][0] = questionModel.fetchQuestion()
+      
         
     }
     
