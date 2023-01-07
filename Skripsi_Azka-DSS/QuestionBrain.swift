@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 struct QuestionBrain {
     
     var question = [
         Question(question: "Does your pet change food recently?", answer: ["Yes", "No"]),
-        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water", "Lainnya"])
+        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water", "Lainnya"]),
+        Question(question: "Does your pet already given Vaccine?", answer: ["Yes", "No"])
     ]
+    
+    
+    
+    var userAnswer: [String] = []
     
     var questionNumber = 0
     
@@ -33,22 +39,22 @@ struct QuestionBrain {
         return question[questionNumber].answer[1]
     }
     
-    func userAnswerDrinking(_ answer: String){
+    mutating func userAnswerPilGan(_ answer: String){
         // Pake Core Data disini
-        
-        print(answer)
+        userAnswer.append(answer)
+        print(userAnswer)
     }
     
-    func userAnswerFeases(_ answer: String){
+    mutating func userAnswerFeases(_ answer: String){
         // Pake Core Data disini
-
-        print(answer)
+        userAnswer.append(answer)
+        print(userAnswer)
         
     }
     
     func checkTopButton() -> Int{
         
-        return question[questionNumber].answer.count - 1 
+        return question[questionNumber].answer.count - 1
     }
     
    mutating func nextQuestion(){

@@ -17,7 +17,7 @@ class PilihanGandaQnAViewController: UIViewController {
     
     var typeOfDesease = ""
     var questionModel = QuestionBrain()
-    
+//    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class PilihanGandaQnAViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        questionModel.userAnswerDrinking(sender.currentTitle ?? "")
+        questionModel.userAnswerPilGan(sender.currentTitle ?? "")
         topButton.isHidden = false
         
         questionModel.nextQuestion()

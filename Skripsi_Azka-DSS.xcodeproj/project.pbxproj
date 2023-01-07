@@ -21,6 +21,7 @@
 		BBDEB55E29691D8F00B018C8 /* PilihanGandaQnAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB55D29691D8F00B018C8 /* PilihanGandaQnAViewController.swift */; };
 		BBDEB560296924E800B018C8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB55F296924E800B018C8 /* Question.swift */; };
 		BBDEB5622969258700B018C8 /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5612969258700B018C8 /* QuestionBrain.swift */; };
+		BBDEB56429692E8F00B018C8 /* UserAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB56329692E8F00B018C8 /* UserAnswer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BBDEB55D29691D8F00B018C8 /* PilihanGandaQnAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihanGandaQnAViewController.swift; sourceTree = "<group>"; };
 		BBDEB55F296924E800B018C8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BBDEB5612969258700B018C8 /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
+		BBDEB56329692E8F00B018C8 /* UserAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				BBDEB5532967D25700B018C8 /* TypeOfDesease.swift */,
 				BBDEB55F296924E800B018C8 /* Question.swift */,
 				BBDEB5612969258700B018C8 /* QuestionBrain.swift */,
+				BBDEB56329692E8F00B018C8 /* UserAnswer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				BBDEB55E29691D8F00B018C8 /* PilihanGandaQnAViewController.swift in Sources */,
 				BBDEB5572967D64000B018C8 /* DeseaseType.swift in Sources */,
 				BBDEB5622969258700B018C8 /* QuestionBrain.swift in Sources */,
+				BBDEB56429692E8F00B018C8 /* UserAnswer.swift in Sources */,
 				BBDEB5542967D25700B018C8 /* TypeOfDesease.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
