@@ -33,12 +33,14 @@ class PilihanGandaQnAViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        questionModel.screenPilihanGanda = true
+        print(userAnswer)
         title = typeOfDesease
         topButton.isHidden = true
         navBarUI()
         fetchQuestion()
         print(feasesScore)
+    
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -55,6 +57,15 @@ class PilihanGandaQnAViewController: UIViewController {
         
         if questionModel.checkTopButton() < 2 {
             topButton.isHidden = true
+        }
+        
+        if questionModel.moveToResultScreen == true {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+                
+                vc.userAnswer = userAnswer
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         
        

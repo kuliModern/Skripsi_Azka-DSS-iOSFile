@@ -10,7 +10,7 @@ import CoreData
 
 class QnAViewController: UIViewController {
     
-    
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var titlefield: UITextField!
     
     var typeOfDesease = ""
@@ -18,13 +18,20 @@ class QnAViewController: UIViewController {
     var picker: MyPickerView?
     var selectedValue: Int?
     var rightBarButtonItem : UIBarButtonItem!
+    
+    var userAnswer = [
+        ["Question1","UserAnswer"],
+        ["Question2","UserAnswer2"],
+        ["Question3","UserAnswer"],
+        ["Question4","UserAnswer2"]
+    ]
 
     
     var questionModel = QuestionBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        questionModel.screenPilihanGanda = false
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(confirmMainMenu))
         
@@ -81,6 +88,9 @@ class QnAViewController: UIViewController {
         selectedValue = picker?.selectedValue
         titlefield.text = String(selectedValue!) ?? ""
         
+        userAnswer[questionModel.questionNumbers()][0] = questionLabel.text!
+        userAnswer[questionModel.questionNumbers()][1] = String(selectedValue!)
+        
         self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
         
     }
@@ -90,6 +100,7 @@ class QnAViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
             vc.typeOfDesease = typeOfDesease
             vc.feasesScore = selectedValue!
+            vc.userAnswer = userAnswer
             
             self.navigationController?.pushViewController(vc, animated: true)
         }

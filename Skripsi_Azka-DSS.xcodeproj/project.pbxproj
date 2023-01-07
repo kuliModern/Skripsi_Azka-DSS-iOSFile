@@ -23,6 +23,7 @@
 		BBDEB5622969258700B018C8 /* QuestionBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5612969258700B018C8 /* QuestionBrain.swift */; };
 		BBDEB56429692E8F00B018C8 /* UserAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB56329692E8F00B018C8 /* UserAnswer.swift */; };
 		BBDEB5662969ADE900B018C8 /* DiareDeases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5652969ADE900B018C8 /* DiareDeases.swift */; };
+		BBDEB5682969BB5900B018C8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5672969BB5900B018C8 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BBDEB5612969258700B018C8 /* QuestionBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrain.swift; sourceTree = "<group>"; };
 		BBDEB56329692E8F00B018C8 /* UserAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswer.swift; sourceTree = "<group>"; };
 		BBDEB5652969ADE900B018C8 /* DiareDeases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiareDeases.swift; sourceTree = "<group>"; };
+		BBDEB5672969BB5900B018C8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				BBDEB53D2967D1BF00B018C8 /* ViewController.swift */,
 				BBDEB55B29683BBE00B018C8 /* QnAViewController.swift */,
 				BBDEB55D29691D8F00B018C8 /* PilihanGandaQnAViewController.swift */,
+				BBDEB5672969BB5900B018C8 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDEB5682969BB5900B018C8 /* ResultViewController.swift in Sources */,
 				BBDEB53E2967D1BF00B018C8 /* ViewController.swift in Sources */,
 				BBDEB55C29683BBE00B018C8 /* QnAViewController.swift in Sources */,
 				BBDEB5662969ADE900B018C8 /* DiareDeases.swift in Sources */,

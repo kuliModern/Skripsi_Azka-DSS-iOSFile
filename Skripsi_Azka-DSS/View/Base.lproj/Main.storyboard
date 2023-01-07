@@ -127,6 +127,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0qW-Az-fZT"/>
                     <connections>
+                        <outlet property="questionLabel" destination="qlE-0C-XlD" id="qBu-7s-hX6"/>
                         <outlet property="titlefield" destination="7jV-wI-k3S" id="Gsk-Po-D8U"/>
                         <segue destination="u5J-ff-R6G" kind="show" id="HxJ-Hj-zql"/>
                     </connections>
@@ -196,11 +197,28 @@
                         <outlet property="midButton" destination="GVk-QQ-DGf" id="DDx-hS-1sU"/>
                         <outlet property="questionText" destination="B2s-f6-ShE" id="A5U-y0-4IM"/>
                         <outlet property="topButton" destination="XZU-BF-e95" id="Ar1-vE-yW9"/>
+                        <segue destination="wjt-lt-zPd" kind="show" id="vMM-xD-eKM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATM-aV-wkn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3979.7101449275365" y="109.82142857142857"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="UjT-gr-uDw">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="wjt-lt-zPd" customClass="ResultViewController" customModule="Skripsi_Azka_DSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Spx-UJ-fxM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fXh-Ou-djU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Af3-PZ-A1N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hT9-cr-7aO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4742" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pWH-Ng-aWX">

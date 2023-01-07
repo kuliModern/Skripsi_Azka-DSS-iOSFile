@@ -17,7 +17,8 @@ struct QuestionBrain {
     ]
     
     var userAnswer: [String] = []
-    
+    var moveToResultScreen = false
+    var screenPilihanGanda = false
     var questionNumber = 0
     
     mutating func fetchQuestion() -> String {
@@ -42,16 +43,22 @@ struct QuestionBrain {
     }
     
     func questionNumbers() -> Int{
-        
-        return questionNumber
+        if screenPilihanGanda == false{
+            return questionNumber
+        } else {
+            return questionNumber + 1
+        }
+       
     }
     
    mutating func nextQuestion(){
        
        if questionNumber < question.count - 1{
            questionNumber += 1
+           moveToResultScreen = false
        }
        else {
+           moveToResultScreen = true
            questionNumber = 0
        }
        
