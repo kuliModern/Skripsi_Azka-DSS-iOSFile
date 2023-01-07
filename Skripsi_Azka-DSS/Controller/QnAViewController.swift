@@ -16,20 +16,27 @@ class QnAViewController: UIViewController {
     var pickerAccessory: UIToolbar?
     var picker: MyPickerView?
     var selectedValue: String?
+    var rightBarButtonItem : UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(confirmMainMenu))
+        
+        self.rightBarButtonItem = UIBarButtonItem(title: "Done", style:         UIBarButtonItem.Style.done, target: self, action: #selector(doneButtonPressed))
+        
+        self.navigationItem.rightBarButtonItem = nil
+        
+        
         
         // Picker
         picker = MyPickerView()
         picker?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         picker?.backgroundColor = UIColor.white
         
-        picker?.data = [1,2,3,4,5,6,7,8,9,10]
+        picker?.data = [1,2,3,4,5,6,7]
         pickerUI()
         
         
@@ -56,7 +63,7 @@ class QnAViewController: UIViewController {
         cancelButton.tintColor = UIColor.red
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil) //a flexible space between the two buttons
-       
+        
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneBtnClicked(_:)))
         
         doneButton.tintColor = UIColor.blue
@@ -65,15 +72,27 @@ class QnAViewController: UIViewController {
     }
     
     
-   @objc func cancelBtnClicked(_ button: UIBarButtonItem?) {
+    @objc func cancelBtnClicked(_ button: UIBarButtonItem?) {
         titlefield?.resignFirstResponder()
     }
-
-   
+    
+    
     @objc func doneBtnClicked(_ button: UIBarButtonItem?) {
         titlefield?.resignFirstResponder()
         selectedValue = picker?.selectedValue
         titlefield.text = selectedValue
+
+        self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
+        
+    }
+    
+    @objc func doneButtonPressed(){
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
+            vc.typeOfDesease = typeOfDesease
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
     }
     
