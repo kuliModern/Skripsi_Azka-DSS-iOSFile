@@ -20,18 +20,18 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(userAnswer)
+        
+        getUserAnswer()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func getUserAnswer(){
+        
+        let firstAnswer = userAnswer[0][1]
+        let firstQuestion = userAnswer[0][0]
+        print("\(firstQuestion): \(firstAnswer)")
+        
     }
-    */
 
 }

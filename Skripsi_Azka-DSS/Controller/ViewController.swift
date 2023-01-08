@@ -62,13 +62,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         deseaseSelected = desease[indexPath.section].deseaseName
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "QnAViewController") as? QnAViewController {
-            vc.typeOfDesease = deseaseSelected
-            
-            self.navigationController?.pushViewController(vc, animated: true)
+        
+        if deseaseSelected == desease[0].deseaseName { // Diare Kepilih
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "QnAViewController") as? QnAViewController {
+                vc.typeOfDesease = deseaseSelected
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
+        if deseaseSelected == desease[1].deseaseName { // Muntah Kepilih
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
+                vc.typeOfDesease = deseaseSelected
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        else { // Jatoh dari ketinggian
             
+        }
     }
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 24
