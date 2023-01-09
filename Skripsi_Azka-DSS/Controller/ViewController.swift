@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         else { // Jatuh dari ketinggian
             
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "FallFromHighPlaceViewController") as? FallFromHighPlaceViewController {
                 vc.typeOfDesease = deseaseSelected
                 
                 self.navigationController?.pushViewController(vc, animated: true)

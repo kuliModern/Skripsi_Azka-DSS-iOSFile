@@ -24,6 +24,8 @@
 		BBDEB56429692E8F00B018C8 /* UserAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB56329692E8F00B018C8 /* UserAnswer.swift */; };
 		BBDEB5662969ADE900B018C8 /* DiareDeases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5652969ADE900B018C8 /* DiareDeases.swift */; };
 		BBDEB5682969BB5900B018C8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB5672969BB5900B018C8 /* ResultViewController.swift */; };
+		BBDEB56A296C526B00B018C8 /* FallFromHighPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB569296C526B00B018C8 /* FallFromHighPlaceViewController.swift */; };
+		BBDEB56C296C535E00B018C8 /* QuestionBrainFallFromHighPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEB56B296C535E00B018C8 /* QuestionBrainFallFromHighPlace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		BBDEB56329692E8F00B018C8 /* UserAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswer.swift; sourceTree = "<group>"; };
 		BBDEB5652969ADE900B018C8 /* DiareDeases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiareDeases.swift; sourceTree = "<group>"; };
 		BBDEB5672969BB5900B018C8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BBDEB569296C526B00B018C8 /* FallFromHighPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallFromHighPlaceViewController.swift; sourceTree = "<group>"; };
+		BBDEB56B296C535E00B018C8 /* QuestionBrainFallFromHighPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBrainFallFromHighPlace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				BBDEB55B29683BBE00B018C8 /* QnAViewController.swift */,
 				BBDEB55D29691D8F00B018C8 /* PilihanGandaQnAViewController.swift */,
 				BBDEB5672969BB5900B018C8 /* ResultViewController.swift */,
+				BBDEB569296C526B00B018C8 /* FallFromHighPlaceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				BBDEB5532967D25700B018C8 /* TypeOfDesease.swift */,
 				BBDEB55F296924E800B018C8 /* Question.swift */,
 				BBDEB5612969258700B018C8 /* QuestionBrain.swift */,
+				BBDEB56B296C535E00B018C8 /* QuestionBrainFallFromHighPlace.swift */,
 				BBDEB56329692E8F00B018C8 /* UserAnswer.swift */,
 				BBDEB5652969ADE900B018C8 /* DiareDeases.swift */,
 			);
@@ -197,12 +203,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDEB5682969BB5900B018C8 /* ResultViewController.swift in Sources */,
+				BBDEB56A296C526B00B018C8 /* FallFromHighPlaceViewController.swift in Sources */,
 				BBDEB53E2967D1BF00B018C8 /* ViewController.swift in Sources */,
 				BBDEB55C29683BBE00B018C8 /* QnAViewController.swift in Sources */,
 				BBDEB5662969ADE900B018C8 /* DiareDeases.swift in Sources */,
 				BBDEB5442967D1BF00B018C8 /* Skripsi_Azka_DSS.xcdatamodeld in Sources */,
 				BBDEB560296924E800B018C8 /* Question.swift in Sources */,
 				BBDEB53A2967D1BF00B018C8 /* AppDelegate.swift in Sources */,
+				BBDEB56C296C535E00B018C8 /* QuestionBrainFallFromHighPlace.swift in Sources */,
 				BBDEB53C2967D1BF00B018C8 /* SceneDelegate.swift in Sources */,
 				BBDEB55E29691D8F00B018C8 /* PilihanGandaQnAViewController.swift in Sources */,
 				BBDEB5572967D64000B018C8 /* DeseaseType.swift in Sources */,

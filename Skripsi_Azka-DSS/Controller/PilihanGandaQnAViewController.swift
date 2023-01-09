@@ -55,6 +55,17 @@ class PilihanGandaQnAViewController: UIViewController {
         
         if questionModel.moveToResultScreen == true {
             if let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+                let totalUserScore = userFecesValue + userMultipleChoiceValue
+                
+                if totalUserScore < 4 {
+                    vc.diseaseCategory = "Low"
+                    vc.isWorm = isWrom
+                } else if totalUserScore < 6 {
+                    vc.diseaseCategory = "Medium"
+                    vc.isWorm = isWrom
+                } else{
+                    vc.diseaseCategory = "High"
+                }
         
                 
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -107,6 +118,17 @@ class PilihanGandaQnAViewController: UIViewController {
                 userMultipleChoiceValue += 0
             }
         }
+        else if question == "Does your pet already given Vaccine?"{
+            if userAnswers == "1x Vaccine"{
+                userMultipleChoiceValue += 1
+            } else if userAnswers == "Not Vaccinated"{
+                userMultipleChoiceValue += 2
+            }
+            else{
+                userMultipleChoiceValue += 0
+            }
+        }
+
        else if question == "Is there any worm in the Feces?"{
             if userAnswers == "No"{
                 userMultipleChoiceValue += 0

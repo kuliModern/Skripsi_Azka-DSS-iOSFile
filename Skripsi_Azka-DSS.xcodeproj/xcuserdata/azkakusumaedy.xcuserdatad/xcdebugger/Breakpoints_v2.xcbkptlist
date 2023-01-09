@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DCD4A650-26C7-4941-ADFE-D3BC79ED7FB4"
+            uuid = "8002423E-2EAC-4D32-A6A1-0B6EDBF8BA32"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Skripsi_Azka-DSS/Controller/ViewController.swift"
+            filePath = "Skripsi_Azka-DSS/Controller/PilihanGandaQnAViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "buttonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

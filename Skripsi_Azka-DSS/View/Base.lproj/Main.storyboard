@@ -68,6 +68,7 @@
                     <connections>
                         <outlet property="deseaseTableView" destination="XpY-gJ-oUD" id="pxF-ak-eLh"/>
                         <segue destination="rKx-wb-NXF" kind="show" id="dfJ-BL-jqJ"/>
+                        <segue destination="o3D-Zr-AjD" kind="show" id="UdV-i2-TOu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -237,6 +238,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsm-5M-AOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="96.428571428571431"/>
+        </scene>
+        <!--Fall From High Place View Controller-->
+        <scene sceneID="9Xm-Xq-uO7">
+            <objects>
+                <viewController storyboardIdentifier="FallFromHighPlaceViewController" id="o3D-Zr-AjD" customClass="FallFromHighPlaceViewController" customModule="Skripsi_Azka_DSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Pd-uN-Tvd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BB-Pf-AKU">
+                                <rect key="frame" x="8" y="550" width="374" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="A" backgroundImage="Rectangle">
+                                    <color key="titleColor" red="0.11413658409999999" green="0.24170440439999999" blue="0.87848049399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="o3D-Zr-AjD" eventType="touchUpInside" id="qVf-yd-Cir"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atu-VT-Waq">
+                                <rect key="frame" x="8" y="640" width="374" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="B" backgroundImage="Rectangle">
+                                    <color key="titleColor" red="0.11413658409999999" green="0.24170440439999999" blue="0.87848049399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="o3D-Zr-AjD" eventType="touchUpInside" id="WRV-3I-CKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSj-KN-ehV">
+                                <rect key="frame" x="8" y="730" width="374" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="C" backgroundImage="Rectangle">
+                                    <color key="titleColor" red="0.11413658409999999" green="0.24170440439999999" blue="0.87848049399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="o3D-Zr-AjD" eventType="touchUpInside" id="fLQ-vB-7O7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" fixedFrame="YES" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a96-61-RYP">
+                                <rect key="frame" x="20" y="214" width="374" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.11413658409999999" green="0.24170440439999999" blue="0.87848049399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Fy-8E-jWd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E7M-tr-D5l"/>
+                    <connections>
+                        <outlet property="bottomButton" destination="dSj-KN-ehV" id="Urs-QU-Boz"/>
+                        <outlet property="midButton" destination="atu-VT-Waq" id="nWC-Uk-sww"/>
+                        <outlet property="questionLabel" destination="a96-61-RYP" id="t6A-V1-HuF"/>
+                        <outlet property="topButton" destination="3BB-Pf-AKU" id="hLF-ui-dFD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lko-Dl-dxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="835"/>
         </scene>
     </scenes>
     <resources>

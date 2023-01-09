@@ -8,13 +8,18 @@
 
 import UIKit
 
-struct QuestionBrain {
+struct QuestionBrainFallFromHighPlace {
     
     var question = [
-        Question(question: "Does your pet change food recently?", answer: ["Yes", "No"]),
-        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water"]),
-        Question(question: "Does your pet already given Vaccine?", answer: ["Fully Vaccinate", "1x Vaccine","Not Vaccinated"]),
-        Question(question: "Is there any worm in the Feces?", answer: ["Yes", "No"])
+       
+        Question(question: "Can they move?", answer: ["Can","Can't"]),
+        Question(question: "Blood Coming Out?", answer: ["No","From Skin","From Nose/Butt Hole/Mouth"]),
+        Question(question: "When walking, How many legs doesn't get use?", answer: ["All of them are in use", "1 Leg","More than one leg"]),
+        Question(question: "Vomitting", answer: ["Yes", "No","Yes, with Blood"]),
+        Question(question: "Diarrhea", answer: ["No", "Yes", "Yes, with Blood"]),
+        Question(question: "Pee", answer: ["Yes","No Peeing"]),
+        Question(question: "Responses when touch", answer: ["Normal","If Coddled, They Groan","If Coddled, They attack"]),
+        Question(question: "Breathing", answer: ["Normal","From Stomach"])
         
     ]
     
