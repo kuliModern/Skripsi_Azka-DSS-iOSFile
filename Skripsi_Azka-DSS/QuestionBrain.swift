@@ -12,8 +12,9 @@ struct QuestionBrain {
     
     var question = [
         Question(question: "Does your pet change food recently?", answer: ["Yes", "No"]),
-        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water", "Other"]),
-        Question(question: "Does your pet already given Vaccine?", answer: ["Yes", "No"])
+        Question(question: "What is your pet source of drinking water?", answer: ["Boiled Water", "Raw Water"]),
+        Question(question: "Does your pet already given Vaccine?", answer: ["Yes", "No"]),
+        Question(question: "Is there any worm in the Feces?", answer: ["Yes", "No"])
     ]
     
     var userAnswer: [String] = []

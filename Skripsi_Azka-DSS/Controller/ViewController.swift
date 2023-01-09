@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     [
         TypeOfQuestion(deseaseName: "Diare"),
-        TypeOfQuestion(deseaseName: "Muntah"),
         TypeOfQuestion(deseaseName: "Jatoh dari tempat tinggi")
     ]
     
@@ -38,7 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,15 +69,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
-        if deseaseSelected == desease[1].deseaseName { // Muntah Kepilih
+        else { // Jatuh dari ketinggian
+            
             if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
                 vc.typeOfDesease = deseaseSelected
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        }
-        else { // Jatoh dari ketinggian
-            
         }
     }
     

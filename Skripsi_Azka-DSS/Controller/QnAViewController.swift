@@ -25,6 +25,8 @@ class QnAViewController: UIViewController {
         ["Question3","UserAnswer"],
         ["Question4","UserAnswer2"]
     ]
+    
+    var userValue = 0
 
     
     var questionModel = QuestionBrain()
@@ -91,6 +93,8 @@ class QnAViewController: UIViewController {
         userAnswer[questionModel.questionNumbers()][0] = questionLabel.text!
         userAnswer[questionModel.questionNumbers()][1] = String(selectedValue!)
         
+        userValue = calculateUserValue(selectedValue ?? 0)
+        
         self.navigationItem.rightBarButtonItem = self.rightBarButtonItem
         
     }
@@ -99,10 +103,22 @@ class QnAViewController: UIViewController {
       
         if let vc = storyboard?.instantiateViewController(withIdentifier: "PilihanGandaQnAViewController") as? PilihanGandaQnAViewController {
             vc.typeOfDesease = typeOfDesease
-            vc.feasesScore = selectedValue!
-            vc.userAnswer = userAnswer
+            vc.userFecesValue = userValue
             
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
+    func calculateUserValue(_ value: Int) -> Int {
+        
+        if value < 3{
+            return 0
+        }
+        else if value > 2 && value < 6  {
+            return 1
+        } else {
+            return 3
         }
         
     }

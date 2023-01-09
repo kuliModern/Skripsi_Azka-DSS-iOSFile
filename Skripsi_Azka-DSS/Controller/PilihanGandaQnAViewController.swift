@@ -22,24 +22,21 @@ class PilihanGandaQnAViewController: UIViewController {
     var arrayUserAnswer = Desease()
     var question = ""
     var userAnswers = ""
+    var userFecesValue = 0
+    var userMultipleChoiceValue = 0
+    var isWrom = false
     
-    var userAnswer = [
-        ["Question1","UserAnswer"],
-        ["Question2","UserAnswer2"],
-        ["Question3","UserAnswer"],
-        ["Question4","UserAnswer2"]
-    ]
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         questionModel.screenPilihanGanda = true
-        print(userAnswer)
         title = typeOfDesease
         topButton.isHidden = true
         navBarUI()
         fetchQuestion()
-        print(feasesScore)
+  
+        print(userFecesValue)
     
     }
     
@@ -47,11 +44,8 @@ class PilihanGandaQnAViewController: UIViewController {
         
         topButton.isHidden = false
         userAnswers = String(sender.currentTitle!)
-        
-        
-         userAnswer[questionModel.questionNumbers()][1] = userAnswers
-         print(userAnswer)
-        
+
+        checkAnswer()
         questionModel.nextQuestion()
         fetchQuestion()
         
@@ -61,13 +55,13 @@ class PilihanGandaQnAViewController: UIViewController {
         
         if questionModel.moveToResultScreen == true {
             if let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
-                
-                vc.userAnswer = userAnswer
+        
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         
+       
        
     }
     
@@ -82,8 +76,6 @@ class PilihanGandaQnAViewController: UIViewController {
             topButton.setTitle(questionModel.fetchAnswerTopButton(), for: .normal)
         }
         
-        userAnswer[questionModel.questionNumbers()][0] = questionModel.fetchQuestion()
-      
         
     }
     
@@ -96,6 +88,36 @@ class PilihanGandaQnAViewController: UIViewController {
     
     @objc func confirmMainMenu() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func checkAnswer(){
+        if question  == "Does your pet change food recently?" {
+            if userAnswers == "Yes"{
+                userMultipleChoiceValue += 1
+            }
+            else{
+                userMultipleChoiceValue += 0
+            }
+        }
+        else if question == "What is your pet source of drinking water?"{
+            if userAnswers == "Raw Water"{
+                userMultipleChoiceValue += 1
+            }
+            else{
+                userMultipleChoiceValue += 0
+            }
+        }
+       else if question == "Is there any worm in the Feces?"{
+            if userAnswers == "No"{
+                userMultipleChoiceValue += 0
+            }
+            else{
+                userMultipleChoiceValue += 1
+                isWrom = true
+            }
+        }
+        
+        
     }
     
 }

@@ -13,3 +13,4 @@ struct TypeOfQuestion{
     let deseaseName: String
 
 }
+
