@@ -11,6 +11,7 @@ import UIKit
 struct TypeOfQuestion{
     
     let deseaseName: String
+    let deseasePhoto: UIImage
 
 }
 

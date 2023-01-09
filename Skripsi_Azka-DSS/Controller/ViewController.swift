@@ -15,8 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var desease: [TypeOfQuestion] =
     
     [
-        TypeOfQuestion(deseaseName: "Diare"),
-        TypeOfQuestion(deseaseName: "Jatoh dari tempat tinggi")
+        TypeOfQuestion(deseaseName: "Diare", deseasePhoto: UIImage(named: "Anjing_Diare")!),
+        TypeOfQuestion(deseaseName: "Fall from high place", deseasePhoto: UIImage(named: "Fall_FromHighPlace")!)
     ]
     
     var deseaseSelected = ""
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         cell.labelDesease.text = desease[indexPath.section].deseaseName
-        cell.imageDesease.image = UIImage(named: "Anjing_Diare")
+        cell.imageDesease.image = desease[indexPath.section].deseasePhoto
         
         
         return cell
