@@ -212,14 +212,56 @@
                     <view key="view" contentMode="scaleToFill" id="Spx-UJ-fxM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mif-QK-vOo">
+                                <rect key="frame" x="55" y="311" width="280" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="6Jj-Fc-a51"/>
+                                    <constraint firstAttribute="height" constant="222" id="wb2-nB-D3A"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="v3h-F4-jkS">
+                                <rect key="frame" x="95" y="191" width="200" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cDw-XC-UMQ"/>
+                                    <constraint firstAttribute="height" constant="91" id="i1U-Ui-Umw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.11413658409999999" green="0.24170440439999999" blue="0.87848049399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="zBx-5h-ici">
+                                <rect key="frame" x="45" y="583" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="IAK-0W-ucs"/>
+                                    <constraint firstAttribute="width" constant="300" id="iuT-Rr-o3R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.11413658409999999" green="0.24170440439999999" blue="0.87848049399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fXh-Ou-djU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mif-QK-vOo" firstAttribute="centerY" secondItem="Spx-UJ-fxM" secondAttribute="centerY" id="AhF-7X-p5F"/>
+                            <constraint firstItem="Mif-QK-vOo" firstAttribute="centerX" secondItem="Spx-UJ-fxM" secondAttribute="centerX" id="USc-In-MzY"/>
+                            <constraint firstItem="zBx-5h-ici" firstAttribute="top" secondItem="Mif-QK-vOo" secondAttribute="bottom" constant="50" id="a2y-s4-0an"/>
+                            <constraint firstItem="v3h-F4-jkS" firstAttribute="centerX" secondItem="Spx-UJ-fxM" secondAttribute="centerX" id="gN2-JI-ZHj"/>
+                            <constraint firstItem="Mif-QK-vOo" firstAttribute="top" secondItem="v3h-F4-jkS" secondAttribute="bottom" constant="29" id="n72-0U-n5r"/>
+                            <constraint firstItem="zBx-5h-ici" firstAttribute="centerX" secondItem="Spx-UJ-fxM" secondAttribute="centerX" id="sL3-Kc-9np"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Af3-PZ-A1N"/>
+                    <connections>
+                        <outlet property="imageResuilt" destination="Mif-QK-vOo" id="1o1-7s-lu3"/>
+                        <outlet property="labelRecomendation" destination="zBx-5h-ici" id="csq-gc-N7z"/>
+                        <outlet property="labelResult" destination="v3h-F4-jkS" id="f0T-tR-tT0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT9-cr-7aO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4742" y="115"/>
+            <point key="canvasLocation" x="4740" y="114.45497630331754"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pWH-Ng-aWX">

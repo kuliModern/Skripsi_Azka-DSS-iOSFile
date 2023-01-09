@@ -45,17 +45,15 @@ class FallFromHighPlaceViewController: UIViewController {
         if questionModel.moveToResultScreen == true {
             if let vc = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
                 
+                vc.fromFallingHighPlace = true
                 
-                if userMultipleChoiceValue < 4 {
+                if userMultipleChoiceValue < 6 {
                     vc.diseaseCategory = "Low"
                     
-                } else if userMultipleChoiceValue < 6 {
-                    vc.diseaseCategory = "Medium"
-                    
-                } else{
+                }
+                else{
                     vc.diseaseCategory = "High"
                 }
-                
                 
                 self.navigationController?.pushViewController(vc, animated: true)
             }
